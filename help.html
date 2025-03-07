@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELP - CostCliq</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <script src="https://kit.fontawesome.com/cbda4b5d11.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <img src="Images/LOGO1.png" class="logoo">
+    <div class="social2">
+        <a href="index.html" ><i class="fa-solid fa-house"></i></a>
+    </div>
+</header>
+<div style="font-size: 24px;"><h2>Help</h2></div>
+<main>
+    <div class="content-section">
+        <h2>How to Use CostCliq</h2>
+        <p>Welcome to CostCliq! Let us help you understand our website :</p>
+        <ol>
+            <li>Use the search bar to find products you're interested in.</li>
+            <li>Explore the recommended products section to discover popular items.</li>
+            <li>Select your preferences in the settings to receive tailored product recommendations.</li>
+            <li>Click on a product to view more details and make a purchase.</li>
+        </ol>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Us</h1>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <input type="message" name="Message" placeholder="Your Message" required>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>        
+</div>
+</main>
+
+<footer>
+    <p>&copy; 2024 CostCliq. All rights reserved.</p>
+</footer>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbybXgP4C8AjT9InjJGCR4bQiIrb2BcexPiU60gtQi92wDiBEXLCMP7wM1pOQ--4U6FZ/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg'); 
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent successfully."; 
+            setTimeout(function(){
+                msg.innerHTML = ""; 
+            }, 5000);
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+</script>
+
+</body>
+</html>

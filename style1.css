@@ -1,0 +1,226 @@
+:root {
+    --primary-color: #ffdab9;
+    --secondary-color: #ffc0cb;
+    --background-color: #fff;
+    --text-color: #333;
+    --highlight-color: #f8bf8ffd;
+    --border-color: #ccc;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    background-size: cover; 
+    color: var(--text-color);
+    text-align: center;
+}
+
+.sociall {
+    margin-top: 30px;
+}
+
+.sociall a {
+    text-decoration: none;
+    font-size: 30px;
+    position: fixed; 
+    top: 50px; 
+    right: 80px;
+    color: #000000;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.sociall a:hover {
+    color: #f3bd6e;
+    transform: translateY(-5px);
+}
+
+.logo {
+    width: 350px;
+    position: relative; 
+    top: 10px; 
+    left: 10px; 
+}
+
+header {
+    background-color: var(--background-color);
+    width: 100%;
+    color: var(--text-color);
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: var(--highlight-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-color);
+}
+
+.user-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.section {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.section li:hover {
+    text-decoration: underline;
+}
+li a[href="settings.html"], li a[href="help.html"] {
+    text-decoration: none;
+    color: black;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.product {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffdab9;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+.suggested-product-container {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.suggested-product-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.suggested-product {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px #000000;
+}
+
+
+.suggested-product a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.suggested-product img {
+    max-width: 200px; 
+    height: auto;
+    margin-bottom: 10px;
+    border: none; 
+}
+
+.suggested-product p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 13px;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    border-top: 2px solid var(--border-color);
+}
